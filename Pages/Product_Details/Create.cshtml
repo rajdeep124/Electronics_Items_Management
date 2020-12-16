@@ -14,21 +14,21 @@
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Product_Detail.Product_Name" class="control-label"></label>
+                <label asp-for="Product_Detail.Product_Name" class="control-label">Product Name</label>
                 <input asp-for="Product_Detail.Product_Name" class="form-control" />
                 <span asp-validation-for="Product_Detail.Product_Name" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Product_Detail.Price" class="control-label"></label>
+                <label asp-for="Product_Detail.Price" class="control-label">Price</label>
                 <input asp-for="Product_Detail.Price" class="form-control" />
                 <span asp-validation-for="Product_Detail.Price" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Product_Detail.Brand_DetailId" class="control-label"></label>
+                <label asp-for="Product_Detail.Brand_DetailId" class="control-label">Brand Detail</label>
                 <select asp-for="Product_Detail.Brand_DetailId" class ="form-control" asp-items="ViewBag.Brand_DetailId"></select>
             </div>
             <div class="form-group">
-                <label asp-for="Product_Detail.Category_DetailId" class="control-label"></label>
+                <label asp-for="Product_Detail.Category_DetailId" class="control-label">CategoryDetail</label>
                 <select asp-for="Product_Detail.Category_DetailId" class ="form-control" asp-items="ViewBag.Category_DetailId"></select>
             </div>
             <div class="form-group">

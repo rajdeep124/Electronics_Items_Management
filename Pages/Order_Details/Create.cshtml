@@ -14,26 +14,26 @@
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Order_Detail.Quantity" class="control-label"></label>
+                <label asp-for="Order_Detail.Quantity" class="control-label">Quantity</label>
                 <input asp-for="Order_Detail.Quantity" class="form-control" />
                 <span asp-validation-for="Order_Detail.Quantity" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Order_Detail.Discount" class="control-label"></label>
+                <label asp-for="Order_Detail.Discount" class="control-label">Discount</label>
                 <input asp-for="Order_Detail.Discount" class="form-control" />
                 <span asp-validation-for="Order_Detail.Discount" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Order_Detail.Actual_Price" class="control-label"></label>
+                <label asp-for="Order_Detail.Actual_Price" class="control-label">Actual Price</label>
                 <input asp-for="Order_Detail.Actual_Price" class="form-control" />
                 <span asp-validation-for="Order_Detail.Actual_Price" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Order_Detail.Customer_DetailId" class="control-label"></label>
+                <label asp-for="Order_Detail.Customer_DetailId" class="control-label">Customer Detail</label>
                 <select asp-for="Order_Detail.Customer_DetailId" class ="form-control" asp-items="ViewBag.Customer_DetailId"></select>
             </div>
             <div class="form-group">
-                <label asp-for="Order_Detail.Product_DetailId" class="control-label"></label>
+                <label asp-for="Order_Detail.Product_DetailId" class="control-label">Product Detail</label>
                 <select asp-for="Order_Detail.Product_DetailId" class ="form-control" asp-items="ViewBag.Product_DetailId"></select>
             </div>
             <div class="form-group">
