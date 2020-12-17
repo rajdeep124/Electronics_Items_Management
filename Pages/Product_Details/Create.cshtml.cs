@@ -21,7 +21,7 @@ namespace Electronics_Items_Management.Pages.Product_Details
 
         public IActionResult OnGet()
         {
-        ViewData["Brand_DetailId"] = new SelectList(_context.Brand_Detail, "Id", "Id");
+        ViewData["Brand_DetailId"] = new SelectList(_context.Brand_Detail, "Id", "Brand_Name");
         ViewData["Category_DetailId"] = new SelectList(_context.Category_Detail, "Id", "Product");
             return Page();
         }
