@@ -5,9 +5,9 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
+<h1>Edit Page</h1>
 
-<h4>Product_Detail</h4>
+<h4>Product Detail</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -15,22 +15,22 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Product_Detail.Id" />
             <div class="form-group">
-                <label asp-for="Product_Detail.Product_Name" class="control-label"></label>
+                <label asp-for="Product_Detail.Product_Name" class="control-label">Product Name</label>
                 <input asp-for="Product_Detail.Product_Name" class="form-control" />
                 <span asp-validation-for="Product_Detail.Product_Name" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Product_Detail.Price" class="control-label"></label>
+                <label asp-for="Product_Detail.Price" class="control-label">Price</label>
                 <input asp-for="Product_Detail.Price" class="form-control" />
                 <span asp-validation-for="Product_Detail.Price" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Product_Detail.Brand_DetailId" class="control-label"></label>
+                <label asp-for="Product_Detail.Brand_DetailId" class="control-label">Brand Detail</label>
                 <select asp-for="Product_Detail.Brand_DetailId" class="form-control" asp-items="ViewBag.Brand_DetailId"></select>
                 <span asp-validation-for="Product_Detail.Brand_DetailId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Product_Detail.Category_DetailId" class="control-label"></label>
+                <label asp-for="Product_Detail.Category_DetailId" class="control-label">Category Detail</label>
                 <select asp-for="Product_Detail.Category_DetailId" class="form-control" asp-items="ViewBag.Category_DetailId"></select>
                 <span asp-validation-for="Product_Detail.Category_DetailId" class="text-danger"></span>
             </div>
@@ -42,7 +42,7 @@
 </div>
 
 <div>
-    <a asp-page="./Index">Back to List</a>
+    <a asp-page="./Index">GO TO HOME PAGE</a>
 </div>
 
 @section Scripts {

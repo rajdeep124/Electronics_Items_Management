@@ -5,9 +5,9 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
+<h1>Edit Page</h1>
 
-<h4>Brand_Detail</h4>
+<h4>Brand Detail</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -15,17 +15,17 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Brand_Detail.Id" />
             <div class="form-group">
-                <label asp-for="Brand_Detail.Brand_Name" class="control-label"></label>
+                <label asp-for="Brand_Detail.Brand_Name" class="control-label">Brand Name</label>
                 <input asp-for="Brand_Detail.Brand_Name" class="form-control" />
                 <span asp-validation-for="Brand_Detail.Brand_Name" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Brand_Detail.Brand_Branch_Location" class="control-label"></label>
+                <label asp-for="Brand_Detail.Brand_Branch_Location" class="control-label">Brand Location</label>
                 <input asp-for="Brand_Detail.Brand_Branch_Location" class="form-control" />
                 <span asp-validation-for="Brand_Detail.Brand_Branch_Location" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Brand_Detail.Brand_Email" class="control-label"></label>
+                <label asp-for="Brand_Detail.Brand_Email" class="control-label">Email</label>
                 <input asp-for="Brand_Detail.Brand_Email" class="form-control" />
                 <span asp-validation-for="Brand_Detail.Brand_Email" class="text-danger"></span>
             </div>
@@ -37,7 +37,7 @@
 </div>
 
 <div>
-    <a asp-page="./Index">Back to List</a>
+    <a asp-page="./Index">GO TO HOME PAGE</a>
 </div>
 
 @section Scripts {
