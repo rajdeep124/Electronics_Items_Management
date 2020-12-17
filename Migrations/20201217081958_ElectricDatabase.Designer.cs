@@ -3,14 +3,16 @@ using Electronics_Items_Management.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Electronics_Items_Management.Migrations
 {
-    [DbContext(typeof(ElectronicsDatabase))]
-    partial class ElectronicsDatabaseModelSnapshot : ModelSnapshot
+    [DbContext(typeof(ElectronicDatabase))]
+    [Migration("20201217081958_ElectricDatabase")]
+    partial class ElectricDatabase
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -32,6 +34,7 @@ namespace Electronics_Items_Management.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Brand_Name")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -91,9 +94,6 @@ namespace Electronics_Items_Management.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .UseIdentityColumn();
-
-                    b.Property<decimal>("Actual_Price")
-                        .HasColumnType("decimal(18,2)");
 
                     b.Property<int>("Customer_DetailId")
                         .HasColumnType("int");

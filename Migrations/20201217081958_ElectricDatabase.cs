@@ -2,7 +2,7 @@
 
 namespace Electronics_Items_Management.Migrations
 {
-    public partial class Electronics : Migration
+    public partial class ElectricDatabase : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,7 +12,7 @@ namespace Electronics_Items_Management.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Brand_Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Brand_Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Brand_Branch_Location = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Brand_Email = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
@@ -87,7 +87,6 @@ namespace Electronics_Items_Management.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Quantity = table.Column<int>(type: "int", nullable: false),
                     Discount = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    Actual_Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     Customer_DetailId = table.Column<int>(type: "int", nullable: false),
                     Product_DetailId = table.Column<int>(type: "int", nullable: false)
                 },

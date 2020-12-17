@@ -12,9 +12,9 @@ namespace Electronics_Items_Management.Pages.Product_Details
 {
     public class DeleteModel : PageModel
     {
-        private readonly Electronics_Items_Management.Data.ElectronicsDatabase _context;
+        private readonly Electronics_Items_Management.Data.ElectronicDatabase _context;
 
-        public DeleteModel(Electronics_Items_Management.Data.ElectronicsDatabase context)
+        public DeleteModel(Electronics_Items_Management.Data.ElectronicDatabase context)
         {
             _context = context;
         }

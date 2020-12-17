@@ -13,9 +13,9 @@ namespace Electronics_Items_Management.Pages.Order_Details
 {
     public class EditModel : PageModel
     {
-        private readonly Electronics_Items_Management.Data.ElectronicsDatabase _context;
+        private readonly Electronics_Items_Management.Data.ElectronicDatabase _context;
 
-        public EditModel(Electronics_Items_Management.Data.ElectronicsDatabase context)
+        public EditModel(Electronics_Items_Management.Data.ElectronicDatabase context)
         {
             _context = context;
         }

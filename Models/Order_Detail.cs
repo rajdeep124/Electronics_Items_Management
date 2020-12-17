@@ -15,8 +15,7 @@ namespace Electronics_Items_Management.Models
 
         public decimal  Discount { get; set; }
 
-        public decimal Actual_Price { get; set; } 
-
+       
         //code to connect the customer class with order class
         public int Customer_DetailId { get; set; }
         public Customer_Detail Customer_Detail { get; set; }

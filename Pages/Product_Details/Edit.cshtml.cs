@@ -13,9 +13,9 @@ namespace Electronics_Items_Management.Pages.Product_Details
 {
     public class EditModel : PageModel
     {
-        private readonly Electronics_Items_Management.Data.ElectronicsDatabase _context;
+        private readonly Electronics_Items_Management.Data.ElectronicDatabase _context;
 
-        public EditModel(Electronics_Items_Management.Data.ElectronicsDatabase context)
+        public EditModel(Electronics_Items_Management.Data.ElectronicDatabase context)
         {
             _context = context;
         }
@@ -38,7 +38,7 @@ namespace Electronics_Items_Management.Pages.Product_Details
             {
                 return NotFound();
             }
-           ViewData["Brand_DetailId"] = new SelectList(_context.Brand_Detail, "Id", "Id");
+           ViewData["Brand_DetailId"] = new SelectList(_context.Brand_Detail, "Id", "Brand_Name");
            ViewData["Category_DetailId"] = new SelectList(_context.Category_Detail, "Id", "Product");
             return Page();
         }

@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Electronics_Items_Management.Data;
 
+
 namespace Electronics_Items_Management
 {
     public class Startup
@@ -27,8 +28,10 @@ namespace Electronics_Items_Management
         {
             services.AddRazorPages();
 
-            services.AddDbContext<ElectronicsDatabase>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("ElectronicsDatabase")));
+            services.AddDbContext<ElectronicDatabase>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("ElectronicDatabase")));
+
+           
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

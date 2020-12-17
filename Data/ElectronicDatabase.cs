@@ -7,9 +7,9 @@ using Electronics_Items_Management.Models;
 
 namespace Electronics_Items_Management.Data
 {
-    public class ElectronicsDatabase : DbContext
+    public class ElectronicDatabase : DbContext
     {
-        public ElectronicsDatabase (DbContextOptions<ElectronicsDatabase> options)
+        public ElectronicDatabase (DbContextOptions<ElectronicDatabase> options)
             : base(options)
         {
         }
@@ -20,8 +20,8 @@ namespace Electronics_Items_Management.Data
 
         public DbSet<Electronics_Items_Management.Models.Customer_Detail> Customer_Detail { get; set; }
 
-        public DbSet<Electronics_Items_Management.Models.Order_Detail> Order_Detail { get; set; }
-
         public DbSet<Electronics_Items_Management.Models.Product_Detail> Product_Detail { get; set; }
+
+        public DbSet<Electronics_Items_Management.Models.Order_Detail> Order_Detail { get; set; }
     }
 }
