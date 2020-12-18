@@ -4,11 +4,13 @@
 @{
     ViewData["Title"] = "Index";
 }
+<!--code to set the location of headings-->
 <style>
     h1 {
         text-align: center
     }
 </style>
+<!--code to link the details-->
 
 <h1>Brand Details</h1>
 
@@ -19,35 +21,36 @@
     <thead>
         <tr>
             <th>
-               Brand Name
+                Brand Name
             </th>
             <th>
-               Brand Location
+                Brand Location
             </th>
             <th>
-               Email
+                Email
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Brand_Detail) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Brand_Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Brand_Branch_Location)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Brand_Email)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model.Brand_Detail)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Brand_Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Brand_Branch_Location)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Brand_Email)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

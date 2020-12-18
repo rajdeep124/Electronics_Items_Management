@@ -4,12 +4,13 @@
 @{
     ViewData["Title"] = "Delete";
 }
+<!--code to set the location of headings-->
 <style>
     h1 {
         text-align: center
     }
 </style>
-
+<!--code to display the customer detail table data to show the details-->
 <h1>Customer Detail</h1>
 <h3>Delete Page</h3>
 
@@ -18,13 +19,13 @@
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
-           Customer Name
+            Customer Name
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Customer_Detail.Customer_Name)
         </dd>
         <dt class="col-sm-2">
-           Email
+            Email
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Customer_Detail.Email)
@@ -36,13 +37,13 @@
             @Html.DisplayFor(model => model.Customer_Detail.Phone)
         </dd>
         <dt class="col-sm-2">
-          Delivery Address
+            Delivery Address
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Customer_Detail.Delivery_Address)
         </dd>
     </dl>
-    
+
     <form method="post">
         <input type="hidden" asp-for="Customer_Detail.Id" />
         <input type="submit" value="Delete" class="btn btn-danger" /> |
