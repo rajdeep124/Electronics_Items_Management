@@ -4,10 +4,15 @@
 @{
     ViewData["Title"] = "Create";
 }
+<style>
+    h1 {
+        text-align: center
+    }
+</style>
+<h1>Product Detail</h1>
 
-<h1>Create P age</h1>
+<h4>Create Page</h4>
 
-<h4>Product Detail</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -25,11 +30,11 @@
             </div>
             <div class="form-group">
                 <label asp-for="Product_Detail.Brand_DetailId" class="control-label">Brand Detail</label>
-                <select asp-for="Product_Detail.Brand_DetailId" class ="form-control" asp-items="ViewBag.Brand_DetailId"></select>
+                <select asp-for="Product_Detail.Brand_DetailId" class="form-control" asp-items="ViewBag.Brand_DetailId"></select>
             </div>
             <div class="form-group">
                 <label asp-for="Product_Detail.Category_DetailId" class="control-label">Category Detail</label>
-                <select asp-for="Product_Detail.Category_DetailId" class ="form-control" asp-items="ViewBag.Category_DetailId"></select>
+                <select asp-for="Product_Detail.Category_DetailId" class="form-control" asp-items="ViewBag.Category_DetailId"></select>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />

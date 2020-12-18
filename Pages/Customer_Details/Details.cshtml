@@ -5,20 +5,26 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details Page</h1>
+<style>
+    h1 {
+        text-align: center
+    }
+</style>
+<h4>Customer Detail</h4>
+
+<h4>Details Page</h4>
 
 <div>
-    <h4>Customer Detail</h4>
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
-           Customer Name
+            Customer Name
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Customer_Detail.Customer_Name)
         </dd>
         <dt class="col-sm-2">
-           Email
+            Email
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Customer_Detail.Email)

@@ -4,6 +4,11 @@
 @{
     ViewData["Title"] = "Index";
 }
+<style>
+    h1 {
+        text-align: center
+    }
+</style>
 
 <h1>Customer Details</h1>
 
@@ -14,7 +19,7 @@
     <thead>
         <tr>
             <th>
-               Customer Name
+                Customer Name
             </th>
             <th>
                 Email
@@ -29,26 +34,27 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Customer_Detail) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Customer_Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Phone)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Delivery_Address)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model.Customer_Detail)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Customer_Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Phone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Delivery_Address)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
