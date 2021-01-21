@@ -128,7 +128,7 @@ namespace Electronics_Items_Management.Migrations
                 table: "Product_Detail",
                 column: "Category_DetailId");
 
-            var sqlFile = Path.Combine(".\\DatabaseScript", @"data.sql");
+            var sqlFile = Path.Combine(".\\DBScript", @"Data.sql");
 
             migrationBuilder.Sql(File.ReadAllText(sqlFile));
         }
